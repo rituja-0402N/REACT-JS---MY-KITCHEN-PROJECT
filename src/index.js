@@ -14,7 +14,11 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="/props" element={<RenderProps />} />
       <Route path="/form" element={<Form />} />
-      <Route path="/menu" element={<Menu />} />
+      <Route path="/menu" element={<Menu />}>
+        <Route path="history" element={<Form />}></Route>
+      </Route>
+
+      <Route />
     </Routes>
   </BrowserRouter>
 );

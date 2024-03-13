@@ -1,7 +1,7 @@
 import "./Menu.css";
 import Hooks from "./Hooks";
 import { Form } from "./Form";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 const dishes = ["Ragda Pattice 😍", "Sev Puri 😍", "Samosa Chaat 😍"];
 const dishObject = dishes.map((dish, i) => ({
   id: i,
@@ -12,7 +12,10 @@ export function Menu(props) {
   return (
     <div className="Menu">
       <div id="link">
-        <Link to="/">Home</Link>
+        <nav>
+          <Link to="/">Home</Link>
+        </nav>
+        <Outlet />
       </div>
       <div id="ChaatImg">
         <img
