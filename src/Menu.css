@@ -1,4 +1,39 @@
-.App {
+#menuItem {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: left;
+  color: violet;
+}
+#ChaatImg {
+  float: right;
+  height: 150px;
+}
+#new {
+  margin-top: 160px;
+  float: right;
+  position: relative;
+  padding-left: 500px;
+  text-align: center;
+}
+#link {
+  float: left;
+  margin-top: 10px;
+}
+#list {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: left;
+  color: violet;
+}
+#forms {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: left;
+  color: violet;
+}
+#counter {
+  padding-top: 0px;
+  padding-bottom: 50px;
   text-align: left;
   color: violet;
 }

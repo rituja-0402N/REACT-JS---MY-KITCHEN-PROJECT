@@ -1,8 +1,12 @@
+import { Link } from "react-router-dom";
+import { App } from "./App";
+import "./Menu.css";
+
 const tahoe_peaks = [
-  { name: "Freel", elevation: 10891 },
-  { name: "Monument", elevation: 10067 },
-  { name: "Pyramid", elevation: 9983 },
-  { name: "Tallac", elevation: 9735 },
+  { name: "Delhi", Address: "21, Chindwara Nagar, East Colony, 08969" },
+  { name: "Noida", Address: "50, Sector 50,East Colony, 08969" },
+  { name: "Gurgaon", Address: "34, Postwala Bunglow, 098569" },
+  { name: "South Delhi", Address: "42, Nalasupar Nagar, South Colony, 08009" },
 ];
 
 function List({ data, renderItem, renderEmpty }) {
@@ -16,17 +20,24 @@ function List({ data, renderItem, renderEmpty }) {
     </ul>
   );
 }
-function RenderProps() {
+export function RenderProps() {
   return (
-    <List
-      data={tahoe_peaks}
-      renderEmpty={<p>This is an empty list.</p>}
-      renderItem={(item) => (
-        <>
-          {item.name} - {item.elevation} ft.
-        </>
-      )}
-    />
+    <div className="props">
+      <div id="link">
+        <Link to="/">Home</Link>
+      </div>
+      <div id="list">
+        <List
+          data={tahoe_peaks}
+          renderEmpty={<p>This is an empty list.</p>}
+          renderItem={(item) => (
+            <>
+              {item.name} - {item.Address}
+            </>
+          )}
+        />
+      </div>
+    </div>
   );
 }
 

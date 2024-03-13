@@ -1,5 +1,6 @@
 import { useState, useEffect, useReducer } from "react";
-import "./Hooks.css";
+// import "./Hooks.css";
+import "./Menu";
 
 function Hooks() {
   const [emotion, setEmotion] = useState("happy");
@@ -17,16 +18,16 @@ function Hooks() {
 
   return (
     <div className="Hooks">
-      <div id="checkbox">
+      {/* <div id="checkbox">
         <input type="checkbox" value={Ordered} onChange={setChecked} />
         <label>{Ordered ? "Ordered" : "Not Ordered"}</label>
-      </div>
+      </div> */}
       {/* <h2>Current Emotion is {emotion}</h2> */}
       {/* <button onClick={() => setEmotion("sad")}>Sad</button>
       <button onClick={() => setEmotion("excited")}>excited</button> */}
       <div id="counter">
-        <h2>Total Ordered Items : {counter}</h2>
         <button onClick={() => setCounter(counter + 1)}>Click to add</button>
+        <h2>Total Items : {counter}</h2>
       </div>
     </div>
   );
